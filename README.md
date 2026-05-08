@@ -22,16 +22,4 @@ The dataset, sourced from the Hugging Face Hub (`krohnedigital/FuelCast`), conta
 - **Navigation Data:** Ship speed (over ground & through water), heading, and bearing.
 - **Environmental Data:** Seafloor depth, wind speed/direction, wave height/period, ocean currents, and solar radiation.
 
-##  Pipeline & Methodology
 
-The project follows a rigorous data science lifecycle, as illustrated below:
-
-```mermaid
-graph TD
-    A[Load Data] --> B(EDA & Missing Value Analysis);
-    B --> C[Missing Value Handling:<br>KNN Imputer + Interpolation];
-    C --> D[Outlier Detection &<br>Winsorization];
-    D --> E[Domain-Driven<br>Feature Engineering];
-    E --> F[Feature Transformation<br>(Log, Power Transform)];
-    F --> G[Correlation Analysis &<br>Feature Reduction];
-    G --> H[Ready for Modeling];
